@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum OrganizationRole {
+  Member
+  Moderator
+  Admin
+}
+
+model User {
+  id                           String    @id @default(cuid())
+  auth0Id                      String?   @unique
+  googleId                     String?   @unique
+  fullName                     String?
+  avatar                       String?
+  currentOrganizationId        String?
+  email                        String    @unique
+  emailVerified                Boolean   @default(false)
+  emailVerificationToken       String?
+  emailVerificationCode        String?
+  emailVerificationCodeExpires DateTime?
+  emailVerificationLinkSent    Boolean   @default(false)
+
+  // timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  organizations OrganizationUser[]
+  invitations   Invitation[]
+}
+
+model Organization {
+  id   String  @id @default(cuid())
+  name String  @unique
+  logo String?
+
+  // timestamps
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  members     OrganizationUser[]
+  invitations Invitation[]
+}
+
+model OrganizationUser {
+  role OrganizationRole @default(Member)
+
+  // timestamps
+  assignedAt DateTime @default(now())
+
+  // relations
+  user           User         @relation(fields: [userId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  userId         String
+  organization   Organization @relation(fields: [organizationId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  organizationId String
+
+  @@id([userId, organizationId])
+}
+
+model Invitation {
+  id String @id @default(cuid())
+
+  role           OrganizationRole @default(Member)
+  email          String
+  inviteAccepted Boolean?         @default(false)
+  token          String?
+
+  // relations
+  inviter   User   @relation(fields: [inviterId], references: [id])
+  inviterId String
+
+  organization   Organization @relation(fields: [organizationId], references: [id], onUpdate: Cascade, onDelete: Cascade)
+  organizationId String
+}

@@ -1,0 +1,1 @@
+export const EMAIL_CONFIRMATION_CODE_LENGTH = 6;
