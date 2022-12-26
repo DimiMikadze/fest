@@ -6,7 +6,11 @@ Fest is a SaaS boilerplate built with Node.js & React. It's equipped with the fo
 - Organizations management system.
 - Invite system: users can join organizations by having different roles.
 
-![alt text](https://github.com/DimiMikadze/fest/blob/main/screenshot.png)
+<p align="center">
+  <kbd>
+    <img width="320" src="https://github.com/DimiMikadze/fest/blob/main/screenshot.png">
+  </kbd>
+</p>
 
 ## Tech Stack
 
