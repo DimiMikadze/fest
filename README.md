@@ -1,10 +1,12 @@
 # Fest
 
-Fest is a SaaS boilerplate built with Node.js & React, and it's equipped with the following features:
+Fest is a SaaS boilerplate built with Node.js & React. It's equipped with the following features:
 
 - User authentication and authorization with email verification and password reset.
 - Organizations management system.
 - Invite system: users can join organizations by having different roles.
+
+![alt text](https://github.com/DimiMikadze/fest/blob/main/screenshot.png)
 
 ## Tech Stack
 
