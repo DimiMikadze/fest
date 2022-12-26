@@ -5,7 +5,7 @@ Fest is a SaaS boilerplate built with Node.js & React. It's equipped with the fo
 - User authentication and authorization with email verification and password reset.
 - Organizations management system.
 - Invite system: users can join organizations by having different roles.
-- Secure API endpoints and Front-end routes.
+- Secure API endpoints and Front-end routes with role-based authorization.
 
 <p align="center">
   <kbd>
