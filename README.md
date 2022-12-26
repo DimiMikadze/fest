@@ -35,7 +35,7 @@ And a [shared](./libs/shared) library for sharing common Typescript types, const
 
 ## Getting started
 
-- Clone the repo: `git clone https://github.com/DimiMikadze/fest.git`
+- Clone the repo: `git clone https://github.com/DimiMikadze/fest.git`.
 - Install dependencies: `yarn`.
 - Rename `apps/api/.env.example` to `.env` and `apps/frontend/.env.local.example` to `.env.local` and update environment variables.
 - Navigate to the `apps/api` directory and run `docker-compose up`, to run the PostgreSQL instance.
