@@ -8,6 +8,9 @@ Fest is a SaaS boilerplate built with Node.js & React. It's equipped with the fo
 
 <p align="center">
   <kbd>
+    <img width="320" src="https://github.com/DimiMikadze/fest/blob/main/screenshot2.png">
+  </kbd>
+  <kbd>
     <img width="320" src="https://github.com/DimiMikadze/fest/blob/main/screenshot.png">
   </kbd>
 </p>
