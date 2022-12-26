@@ -20,8 +20,8 @@ Fest is a SaaS boilerplate built with Node.js & React. It's equipped with the fo
 
 The repository is structured as a Monorepo using [Nx](https://nx.dev). It contains two apps:
 
-- [API](./apps/api) A [Nest.js](https://nestjs.com/) application, with [Prisma ORM](https://www.prisma.io/).
-- [Front-end](./apps/frontend) A [Next.js](https://nextjs.org/) application with [MUI](https://mui.com/) React components.
+- [api](./apps/api) A [Nest.js](https://nestjs.com/) application, with [Prisma ORM](https://www.prisma.io/).
+- [frontend](./apps/frontend) A [Next.js](https://nextjs.org/) application with [MUI](https://mui.com/) React components.
 
 And a [shared](./libs/shared) library for sharing common Typescript types, constants, and utility functions across apps.
 
