@@ -24,6 +24,7 @@ export const NextLinkComposed = React.forwardRef<
 
   return (
     <NextLink
+      legacyBehavior
       href={to}
       prefetch={prefetch}
       as={linkAs}
