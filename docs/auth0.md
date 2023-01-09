@@ -12,7 +12,7 @@ docs: https://auth0.com/blog/developing-a-secure-api-with-nestjs-adding-authoriz
 - Once you've added those values, hit the Create button.
 
 ```
-AUTH0_DOMAIN=https://<AUTH0-TENANT-NAME>.auth0.com/
+AUTH0_DOMAIN=https://<AUTH0-TENANT-NAME>.auth0.com
 AUTH0_AUDIENCE=https://menu-api.demo.com
 ```
 
