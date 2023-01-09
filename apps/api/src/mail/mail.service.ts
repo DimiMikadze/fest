@@ -20,7 +20,7 @@ export class MailService {
   async send({ to, subject, body }) {
     try {
       this.mailClient.sendEmail({
-        From: 'no-reply@fest.dev',
+        From: this.config.get('POSTMARK_SENDER'),
         To: to,
         Subject: subject,
         HtmlBody: body,
